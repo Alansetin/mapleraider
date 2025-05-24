@@ -13,7 +13,6 @@ const translations = {
     benefit4: "✅ Clear organization by boss/date.",
     benefit5: "✅ Private alerts for the leader.",
     invite_button: '<i class="fab fa-discord me-2"></i>Invite to my Server'
-
   },
   es: {
     tab_home: "Inicio",
@@ -28,6 +27,5 @@ const translations = {
     benefit4: "✅ Organización clara por jefe y fecha.",
     benefit5: "✅ Notificaciones privadas al líder.",
     invite_button: '<i class="fab fa-discord me-2"></i>Invitar a mi Servidor'
-
   }
 };
