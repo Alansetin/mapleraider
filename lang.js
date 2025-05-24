@@ -1,8 +1,8 @@
-
 const translations = {
   en: {
     tab_home: "Home",
     tab_commands: "Commands",
+    tab_support: "Support",
     home_title: "Welcome to Maple Raider",
     home_intro: "Maple Raider is a bot to organize MapleStory raids in Discord easily.",
     home_question: "What is Maple Raider?",
@@ -14,6 +14,7 @@ const translations = {
     benefit4: "✅ Clear organization by boss/date.",
     benefit5: "✅ Private alerts for the leader.",
     invite_button: '<i class="fab fa-discord me-2"></i>Invite to my Server',
+
     commands_title: "Command Guide",
     boss_command_title: "/boss",
     boss_command_desc: "Creates a new raid. Use this command to specify the boss, difficulty, date, time and max party size.",
@@ -32,14 +33,18 @@ const translations = {
     bosscfg_command_desc: "Allows server admins to set language, category and permissions.",
     bosshelp_command_title: "/bosshelp",
     bosshelp_command_desc: "Displays this guide directly in Discord for quick reference.",
+    bosskick_command_title: "/bosskick",
+    bosskick_command_desc: "Allows the organizer to remove a user from the confirmed list of an active raid.",
+
     support_title: "Support Us",
     support_message: "This bot will always remain free to use as long as I'm financially able to support it. However, donations are greatly appreciated and help keep the service running.",
     support_button: '<i class="fas fa-heart me-2"></i>Donate via Ko-fi'
-
   },
+
   es: {
     tab_home: "Inicio",
     tab_commands: "Comandos",
+    tab_support: "Apóyanos",
     home_title: "Bienvenido a Maple Raider",
     home_intro: "Maple Raider es un bot para organizar raids de MapleStory en Discord.",
     home_question: "¿Qué es Maple Raider?",
@@ -51,6 +56,7 @@ const translations = {
     benefit4: "✅ Organización clara por jefe y fecha.",
     benefit5: "✅ Notificaciones privadas al líder.",
     invite_button: '<i class="fab fa-discord me-2"></i>Invitar a mi Servidor',
+
     commands_title: "Guía de Comandos",
     boss_command_title: "/boss",
     boss_command_desc: "Crea una nueva raid. Usa este comando para especificar el jefe, dificultad, fecha, hora y el tamaño máximo del grupo.",
@@ -69,9 +75,11 @@ const translations = {
     bosscfg_command_desc: "Permite a los admins configurar idioma, categoría y permisos.",
     bosshelp_command_title: "/bosshelp",
     bosshelp_command_desc: "Muestra esta guía directamente en Discord como referencia rápida.",
+    bosskick_command_title: "/bosskick",
+    bosskick_command_desc: "Permite al organizador remover a un usuario de la lista de confirmados de una raid activa.",
+
     support_title: "Apóyanos",
     support_message: "Este bot siempre será gratuito mientras mis posibilidades económicas lo permitan. Sin embargo, las donaciones son enormemente apreciadas y se utilizan para mantener el servicio en línea.",
     support_button: '<i class="fas fa-heart me-2"></i>Donar vía Ko-fi'
-
   }
 };
