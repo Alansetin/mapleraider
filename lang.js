@@ -12,7 +12,8 @@ const translations = {
     benefit3: "✅ Automatic reminders.",
     benefit4: "✅ Clear organization by boss/date.",
     benefit5: "✅ Private alerts for the leader.",
-    invite_button: "Invite to my Server"
+    invite_button: "Invite to my Server",
+    invite_button: '<i class="fab fa-discord me-2"></i>Invite to my Server'
   },
   es: {
     tab_home: "Inicio",
@@ -26,6 +27,8 @@ const translations = {
     benefit3: "✅ Recordatorios automáticos.",
     benefit4: "✅ Organización clara por jefe y fecha.",
     benefit5: "✅ Notificaciones privadas al líder.",
-    invite_button: "Invitar a mi Servidor"
+    invite_button: "Invitar a mi Servidor",
+    invite_button: '<i class="fab fa-discord me-2"></i>Invitar a mi Servidor'
+
   }
 };
