@@ -37,13 +37,24 @@
       color: var(--accent-orange);
     }
 
-    .nav-link {
+    .nav-link.custom-tab {
+      background-color: transparent;
+      border: none;
       color: var(--accent-cream);
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      transition: background-color 0.3s;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
     }
 
-    .nav-link.active {
+    .nav-link.custom-tab:hover {
       background-color: var(--bg-mid);
-      color: var(--accent-cream);
+    }
+
+    .nav-link.custom-tab.active {
+      background-color: var(--accent-orange);
+      color: var(--bg-dark);
     }
 
     .tab-content {
@@ -69,17 +80,25 @@
 </head>
 <body>
 
-  <!-- Navbar con Logo -->
+  <!-- Navbar con Logo y Tabs -->
   <nav class="navbar navbar-expand-lg fixed-top shadow">
     <div class="container-fluid d-flex justify-content-between">
       <span class="navbar-brand">
         <span class="logo-maple">Maple</span><span class="logo-raider">Raider</span>
       </span>
-      <ul class="navbar-nav ms-auto nav nav-tabs" id="botTabs" role="tablist">
-        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#inicio">Inicio</button></li>
-        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#instrucciones">Instrucciones</button></li>
-        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#comandos">Comandos</button></li>
-        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#donaciones">Donaciones</button></li>
+      <ul class="navbar-nav ms-auto" id="botTabs" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link custom-tab active" data-bs-toggle="tab" data-bs-target="#inicio">Inicio</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#instrucciones">Instrucciones</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#comandos">Comandos</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#donaciones">Donaciones</button>
+        </li>
       </ul>
     </div>
   </nav>
