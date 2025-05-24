@@ -12,7 +12,17 @@ const translations = {
     benefit3: "✅ Automatic reminders.",
     benefit4: "✅ Clear organization by boss/date.",
     benefit5: "✅ Private alerts for the leader.",
-    invite_button: '<i class="fab fa-discord me-2"></i>Invite to my Server'
+    invite_button: '<i class="fab fa-discord me-2"></i>Invite to my Server',
+    commands_title: "Command Guide",
+    boss_command_title: "/boss",
+    boss_command_desc: "Creates a new raid with specified boss, date, time and max party size.",
+    boss_command_example: "Example: /boss boss:Lotus difficulty:Hard date:05-30 time:22:00 max_party:6 description:Let's go!",
+    bosslist_command_title: "/bosslist",
+    bosslist_command_desc: "Displays a list of all confirmed users for the raid.",
+    bosscfg_command_title: "/bosscfg",
+    bosscfg_command_desc: "Allows server admins to set language, category and permissions.",
+    bosshelp_command_title: "/bosshelp",
+    bosshelp_command_desc: "Displays this guide directly in Discord for quick reference."
   },
   es: {
     tab_home: "Inicio",
@@ -26,6 +36,16 @@ const translations = {
     benefit3: "✅ Recordatorios automáticos.",
     benefit4: "✅ Organización clara por jefe y fecha.",
     benefit5: "✅ Notificaciones privadas al líder.",
-    invite_button: '<i class="fab fa-discord me-2"></i>Invitar a mi Servidor'
+    invite_button: '<i class="fab fa-discord me-2"></i>Invitar a mi Servidor',
+    commands_title: "Guía de Comandos",
+    boss_command_title: "/boss",
+    boss_command_desc: "Crea una nueva raid con jefe, fecha, hora y tamaño máximo del grupo.",
+    boss_command_example: "Ejemplo: /boss boss:Lotus difficulty:Hard date:05-30 time:22:00 max_party:6 description:¡Vamos!",
+    bosslist_command_title: "/bosslist",
+    bosslist_command_desc: "Muestra una lista de todos los usuarios confirmados para la raid.",
+    bosscfg_command_title: "/bosscfg",
+    bosscfg_command_desc: "Permite a los admins configurar idioma, categoría y permisos.",
+    bosshelp_command_title: "/bosshelp",
+    bosshelp_command_desc: "Muestra esta guía directamente en Discord como referencia rápida."
   }
 };
