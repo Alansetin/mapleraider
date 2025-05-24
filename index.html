@@ -75,6 +75,10 @@
       background-color: var(--accent-orange);
       color: var(--bg-dark);
     }
+    .bg-mid {
+      background-color: var(--bg-mid);
+      color: var(--accent-cream);
+    }
   </style>
 </head>
 <body>
@@ -96,22 +100,31 @@
   <div class="container">
     <div class="tab-content" id="botTabsContent">
       <div class="tab-pane fade show active" id="inicio">
-        <h1 class="mb-4"><i class="fas fa-home"></i> <span id="home_title"></span></h1>
-        <p id="home_intro"></p>
-        <h4 class="mt-4"><i class="fas fa-question-circle me-2 text-warning"></i> <span id="home_question"></span></h4>
-        <p id="home_answer"></p>
-        <h4 class="mt-4"><i class="fas fa-star me-2 text-warning"></i> <span id="home_benefits"></span></h4>
-        <ul class="mt-2">
-          <li id="benefit1"></li>
-          <li id="benefit2"></li>
-          <li id="benefit3"></li>
-          <li id="benefit4"></li>
-          <li id="benefit5"></li>
-        </ul>
-        <div class="text-center mt-4">
-          <a id="invite_button" href="#" target="_blank" class="btn btn-lg" style="background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold;">
-            <i class="fab fa-discord me-2"></i>
-          </a>
+        <section class="text-center pt-5 pb-4">
+          <h1 class="mb-3 display-5 fw-bold">
+            <i class="fas fa-home me-2 text-warning"></i><span id="home_title"></span>
+          </h1>
+          <p class="lead" id="home_intro"></p>
+        </section>
+
+        <section class="bg-dark p-4 rounded mb-4">
+          <h4 class="mb-3"><i class="fas fa-question-circle me-2 text-warning"></i> <span id="home_question"></span></h4>
+          <p id="home_answer" class="mb-0"></p>
+        </section>
+
+        <section class="bg-dark p-4 rounded mb-4">
+          <h4 class="mb-4"><i class="fas fa-star me-2 text-warning"></i> <span id="home_benefits"></span></h4>
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+            <div class="col"><div class="p-3 bg-mid rounded shadow-sm"><span id="benefit1"></span></div></div>
+            <div class="col"><div class="p-3 bg-mid rounded shadow-sm"><span id="benefit2"></span></div></div>
+            <div class="col"><div class="p-3 bg-mid rounded shadow-sm"><span id="benefit3"></span></div></div>
+            <div class="col"><div class="p-3 bg-mid rounded shadow-sm"><span id="benefit4"></span></div></div>
+            <div class="col"><div class="p-3 bg-mid rounded shadow-sm"><span id="benefit5"></span></div></div>
+          </div>
+        </section>
+
+        <div class="text-center mt-5">
+          <a id="invite_button" href="#" target="_blank" class="btn btn-lg shadow" style="background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold; padding: 0.75rem 2rem;"></a>
         </div>
       </div>
     </div>
@@ -125,20 +138,17 @@
   <script src="lang.js"></script>
   <script>
     let currentLang = 'en';
-
     function applyLanguage(lang) {
       const elements = document.querySelectorAll("[id]");
       elements.forEach(el => {
         const key = el.id;
         if (translations[lang][key]) {
           if (key === 'invite_button') {
-            el.innerHTML = translations[lang][key];  // ← para conservar el ícono
+            el.innerHTML = translations[lang][key];
           } else {
             el.innerText = translations[lang][key];
           }
         }
-      });
-    }
       });
     }
     document.getElementById('langToggle').addEventListener('click', () => {
