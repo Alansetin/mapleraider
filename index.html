@@ -1,14 +1,12 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maple Raider</title>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Estilos personalizados -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
       --bg-dark: #171717;
@@ -17,36 +15,29 @@
       --accent-orange: #da823d;
       --accent-cream: #eee7c9;
     }
-
     body {
-  background-color: var(--bg-dark);
-  background-image: url('bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  color: var(--accent-cream);
-  padding-top: 80px;
-}
-
-
+      background-color: var(--bg-dark);
+      background-image: url('styles/bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      color: var(--accent-cream);
+      padding-top: 80px;
+    }
     .navbar {
       background-color: var(--bg-dark-alt);
     }
-
     .navbar-brand {
       font-size: 1.8rem;
       font-weight: bold;
     }
-
     .logo-maple {
       color: var(--accent-cream);
     }
-
     .logo-raider {
       color: var(--accent-orange);
     }
-
     .nav-link.custom-tab {
       background-color: transparent;
       border: none;
@@ -57,36 +48,29 @@
       border-radius: 0.25rem;
       padding: 0.5rem 1rem;
     }
-
     .nav-link.custom-tab:hover {
       background-color: var(--bg-mid);
     }
-
     .nav-link.custom-tab.active {
       background-color: var(--accent-orange);
       color: var(--bg-dark);
     }
-
     .tab-content {
       background-color: var(--bg-mid);
       padding: 2rem 1.5rem;
       border-radius: 0.5rem;
     }
-
     h1, h2 {
       color: var(--accent-cream);
     }
-
     h2 i {
       margin-right: 0.5rem;
       color: var(--accent-orange);
     }
-
     .btn-outline-light {
       border-color: var(--accent-cream);
       color: var(--accent-cream);
     }
-
     .btn-outline-light:hover {
       background-color: var(--accent-orange);
       color: var(--bg-dark);
@@ -94,8 +78,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Navbar con Logo y Tabs -->
   <nav class="navbar navbar-expand-lg fixed-top shadow">
     <div class="container-fluid d-flex justify-content-between">
       <span class="navbar-brand">
@@ -104,115 +86,62 @@
       <ul class="navbar-nav ms-auto" id="botTabs" role="tablist">
         <li class="nav-item">
           <button class="nav-link custom-tab active" data-bs-toggle="tab" data-bs-target="#inicio">
-            <i class="fas fa-home me-1"></i> Inicio
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#instrucciones">
-            <i class="fas fa-book me-1"></i> Instrucciones
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#comandos">
-            <i class="fas fa-terminal me-1"></i> Comandos
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#donaciones">
-            <i class="fas fa-heart me-1"></i> Donaciones
+            <i class="fas fa-home me-1"></i> <span id="tab_home">Home</span>
           </button>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Tabs Content -->
   <div class="container">
     <div class="tab-content" id="botTabsContent">
-  <!-- Tab Inicio -->
       <div class="tab-pane fade show active" id="inicio">
-  <h1 class="mb-4"><i class="fas fa-home"></i> Bienvenido a Maple Raider</h1>
-  <p><strong>Maple Raider</strong> es un bot diseñado para facilitar la organización de raids en servidores de Discord relacionados con MapleStory.</p>
-
-  <h4 class="mt-4"><i class="fas fa-question-circle me-2 text-warning"></i> ¿Qué es Maple Raider?</h4>
-  <p>Es un organizador automatizado de raids con soporte en dos idiomas, confirmaciones con botones, recordatorios y creación automática de canales.</p>
-
-  <h4 class="mt-4"><i class="fas fa-star me-2 text-warning"></i> 5 Ventajas de usar un organizador de raids</h4>
-  <ul class="mt-2">
-    <li>✅ Evitas confusiones al coordinar grupos.</li>
-    <li>✅ Confirmaciones rápidas con solo un clic.</li>
-    <li>✅ Recordatorios automáticos antes del evento.</li>
-    <li>✅ Organización por jefes, fechas y dificultades.</li>
-    <li>✅ Notificaciones privadas al organizador y botones para finalizar o cancelar.</li>
-  </ul>
-
-  <div class="text-center mt-4">
-    <a href="https://discord.com/oauth2/authorize?client_id=TU_CLIENT_ID&scope=bot%20applications.commands&permissions=8" target="_blank" class="btn btn-lg" style="background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold;">
-      <i class="fab fa-discord me-2"></i>Invitar a mi Servidor
-    </a>
-  </div>
-</div>
-
-  <!-- Tabs Instrucciones -->
-      <div class="tab-pane fade" id="instrucciones">
-  <h2><i class="fas fa-book"></i> Guía de Uso</h2>
-  <p class="mb-4">A continuación te mostramos cómo utilizar cada comando del bot con explicaciones claras y ejemplos.</p>
-
-  <div class="mb-5">
-    <h4 class="text-warning"><i class="fas fa-bullhorn me-2"></i>/boss</h4>
-    <p><strong>Crea una nueva raid.</strong> Define el jefe, la dificultad, la fecha y la hora. El bot generará un mensaje interactivo con botones para confirmar asistencia.</p>
-    <pre class="bg-dark p-3 rounded"><code>/boss boss:Lotus difficulty:Hard date:05-30 time:22:00 max_party:6 description:Party para Lotus Hard</code></pre>
-    <p>🎯 <em>Recomendado para líderes de party que quieran coordinar rápido y sin confusión.</em></p>
-  </div>
-
-  <div class="mb-5">
-    <h4 class="text-warning"><i class="fas fa-list-ul me-2"></i>/bosslist</h4>
-    <p><strong>Muestra la lista de confirmados</strong> para la raid actual, incluyendo menciones y contador de integrantes.</p>
-    <pre class="bg-dark p-3 rounded"><code>/bosslist</code></pre>
-    <p>👥 <em>Útil para verificar quién ya se unió antes de iniciar la batalla.</em></p>
-  </div>
-
-  <div class="mb-5">
-    <h4 class="text-warning"><i class="fas fa-gear me-2"></i>/bosscfg</h4>
-    <p><strong>Configura el idioma, categoría y permisos.</strong> Permite decidir quién puede usar los comandos del bot y en qué canal se crean las raids.</p>
-    <pre class="bg-dark p-3 rounded"><code>/bosscfg</code></pre>
-    <p>⚙️ <em>Ideal para administradores y moderadores del servidor.</em></p>
-  </div>
-
-  <div class="mb-5">
-    <h4 class="text-warning"><i class="fas fa-circle-question me-2"></i>/bosshelp</h4>
-    <p><strong>Muestra esta guía directamente dentro de Discord</strong> como un embed bonito, útil para nuevos usuarios.</p>
-    <pre class="bg-dark p-3 rounded"><code>/bosshelp</code></pre>
-    <p>📚 <em>Todos los comandos en un solo lugar, sin salir del servidor.</em></p>
-  </div>
-</div>
-
-
-        <!-- Tabs Comandos -->
-      <div class="tab-pane fade" id="comandos">
-        <h2><i class="fas fa-terminal"></i> Lista de comandos</h2>
-        <ul>
-          <li><code>/boss</code>: Inicia una nueva raid con fecha, hora y jefe.</li>
-          <li><code>/bosslist</code>: Muestra la lista de confirmados.</li>
-          <li><code>/bosscfg</code>: Configura idioma, categoría y permisos.</li>
-          <li><code>/bosshelp</code>: Muestra la guía rápida en Discord.</li>
+        <h1 class="mb-4"><i class="fas fa-home"></i> <span id="home_title"></span></h1>
+        <p id="home_intro"></p>
+        <h4 class="mt-4"><i class="fas fa-question-circle me-2 text-warning"></i> <span id="home_question"></span></h4>
+        <p id="home_answer"></p>
+        <h4 class="mt-4"><i class="fas fa-star me-2 text-warning"></i> <span id="home_benefits"></span></h4>
+        <ul class="mt-2">
+          <li id="benefit1"></li>
+          <li id="benefit2"></li>
+          <li id="benefit3"></li>
+          <li id="benefit4"></li>
+          <li id="benefit5"></li>
         </ul>
+        <div class="text-center mt-4">
+          <a id="invite_button" href="#" target="_blank" class="btn btn-lg" style="background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold;">
+            <i class="fab fa-discord me-2"></i>
+          </a>
+        </div>
       </div>
-
-        <!-- Tabs Support -->
-
-      <div class="tab-pane fade text-center" id="donaciones">
-        <h2><i class="fas fa-heart"></i> Apóyanos</h2>
-        <p>Si Maple Raider te ha sido útil, considera ayudarnos a continuar con su desarrollo.</p>
-        <a href="https://ko-fi.com/tuusuario" target="_blank" class="btn btn-outline-light mt-3">
-          <i class="fas fa-mug-hot me-2"></i>Donar con Ko-fi
-        </a>
-      </div>
-
     </div>
   </div>
 
-  <!-- Scripts -->
+  <button id="langToggle" class="btn btn-sm" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold;">
+    🌐 EN
+  </button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lang.js"></script>
+  <script>
+    let currentLang = 'en';
+    function applyLanguage(lang) {
+      const elements = document.querySelectorAll("[id]");
+      elements.forEach(el => {
+        const key = el.id;
+        if (translations[lang][key]) {
+          el.innerText = translations[lang][key];
+        }
+      });
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').innerText = currentLang === 'es' ? '🌐 ES' : '🌐 EN';
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      applyLanguage(currentLang);
+    });
+  </script>
 </body>
 </html>
