@@ -68,7 +68,7 @@ const translations = {
     bosscfg_command_title: "/bosscfg",
     bosscfg_command_desc: "Permite a los admins configurar idioma, categoría y permisos.",
     bosshelp_command_title: "/bosshelp",
-    bosshelp_command_desc: "Muestra esta guía directamente en Discord como referencia rápida."
+    bosshelp_command_desc: "Muestra esta guía directamente en Discord como referencia rápida.",
     bosskick_command_title: "/bosskick",
     bosskick_command_desc: "Permite al organizador remover a un usuario de la lista de confirmados de una raid activa."
   }
