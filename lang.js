@@ -31,7 +31,11 @@ const translations = {
     bosscfg_command_title: "/bosscfg",
     bosscfg_command_desc: "Allows server admins to set language, category and permissions.",
     bosshelp_command_title: "/bosshelp",
-    bosshelp_command_desc: "Displays this guide directly in Discord for quick reference."
+    bosshelp_command_desc: "Displays this guide directly in Discord for quick reference.",
+    bosskick_command_title: "/bosskick",
+    bosskick_command_desc: "Allows the organizer to remove a user from the confirmed list of an active raid."
+
+
   },
   es: {
     tab_home: "Inicio",
@@ -65,5 +69,7 @@ const translations = {
     bosscfg_command_desc: "Permite a los admins configurar idioma, categoría y permisos.",
     bosshelp_command_title: "/bosshelp",
     bosshelp_command_desc: "Muestra esta guía directamente en Discord como referencia rápida."
+    bosskick_command_title: "/bosskick",
+    bosskick_command_desc: "Permite al organizador remover a un usuario de la lista de confirmados de una raid activa."
   }
 };
