@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,18 +62,6 @@
     h1, h2 {
       color: var(--accent-cream);
     }
-    h2 i {
-      margin-right: 0.5rem;
-      color: var(--accent-orange);
-    }
-    .btn-outline-light {
-      border-color: var(--accent-cream);
-      color: var(--accent-cream);
-    }
-    .btn-outline-light:hover {
-      background-color: var(--accent-orange);
-      color: var(--bg-dark);
-    }
     .bg-mid {
       background-color: var(--bg-mid);
       color: var(--accent-cream);
@@ -93,7 +80,6 @@
             <i class="fas fa-home me-1"></i> <span id="tab_home">Home</span>
           </button>
         </li>
-
         <li class="nav-item">
           <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#comandos">
             <i class="fas fa-terminal me-1"></i> <span id="tab_commands">Commands</span>
@@ -110,11 +96,11 @@
 
   <div class="container">
     <div class="tab-content" id="botTabsContent">
+
+      <!-- INICIO -->
       <div class="tab-pane fade show active" id="inicio">
         <section class="text-center pt-5 pb-4">
-          <h1 class="mb-3 display-5 fw-bold">
-            <i class="fas fa-home me-2 text-warning"></i><span id="home_title"></span>
-          </h1>
+          <h1 class="mb-3 display-5 fw-bold"><i class="fas fa-home me-2 text-warning"></i><span id="home_title"></span></h1>
           <p class="lead" id="home_intro"></p>
         </section>
 
@@ -138,36 +124,28 @@
           <a id="invite_button" href="#" target="_blank" class="btn btn-lg shadow" style="background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold; padding: 0.75rem 2rem;"></a>
         </div>
       </div>
-    
+
+      <!-- COMANDOS -->
       <div class="tab-pane fade" id="comandos">
         <section class="text-center pt-5 pb-4">
-          <h1 class="mb-3 display-5 fw-bold">
-            <i class="fas fa-terminal me-2 text-warning"></i><span id="commands_title"></span>
-          </h1>
+          <h1 class="mb-3 display-5 fw-bold"><i class="fas fa-terminal me-2 text-warning"></i><span id="commands_title"></span></h1>
         </section>
 
-        
-    <section class="bg-dark p-4 rounded mb-4">
-      <h4 class="text-warning"><span id="boss_command_title"></span></h4>
-      <p id="boss_command_desc"></p>
-      <p class="fw-bold mt-3" id="boss_command_params"></p>
-      <ul>
-        <li id="boss_param_boss"></li>
-        <li id="boss_param_difficulty"></li>
-        <li id="boss_param_date"></li>
-        <li id="boss_param_time"></li>
-        <li id="boss_param_party"></li>
-        <li id="boss_param_description"></li>
-        <li class="nav-item">
-          <button class="nav-link custom-tab" data-bs-toggle="tab" data-bs-target="#donaciones">
-            <i class="fas fa-heart me-1"></i> <span id="tab_support">Support</span>
-          </button>
-        </li>
-      </ul>
-      <p class="text-warning fw-bold" id="boss_param_utc_note"></p>
-      <pre class="bg-mid p-3 rounded mt-3"><code id="boss_command_example"></code></pre>
-    </section>
-    
+        <section class="bg-dark p-4 rounded mb-4">
+          <h4 class="text-warning"><span id="boss_command_title"></span></h4>
+          <p id="boss_command_desc"></p>
+          <p class="fw-bold mt-3" id="boss_command_params"></p>
+          <ul>
+            <li id="boss_param_boss"></li>
+            <li id="boss_param_difficulty"></li>
+            <li id="boss_param_date"></li>
+            <li id="boss_param_time"></li>
+            <li id="boss_param_party"></li>
+            <li id="boss_param_description"></li>
+          </ul>
+          <p class="text-warning fw-bold" id="boss_param_utc_note"></p>
+          <pre class="bg-mid p-3 rounded mt-3"><code id="boss_command_example"></code></pre>
+        </section>
 
         <section class="bg-dark p-4 rounded mb-4">
           <h4 class="text-warning"><span id="bosslist_command_title"></span></h4>
@@ -183,9 +161,27 @@
           <h4 class="text-warning"><span id="bosshelp_command_title"></span></h4>
           <p id="bosshelp_command_desc"></p>
         </section>
+
+        <section class="bg-dark p-4 rounded mb-4">
+          <h4 class="text-warning"><span id="bosskick_command_title"></span></h4>
+          <p id="bosskick_command_desc"></p>
+        </section>
       </div>
 
+      <!-- DONACIONES -->
+      <div class="tab-pane fade text-center" id="donaciones">
+        <section class="pt-5 pb-4">
+          <h1 class="mb-3 display-5 fw-bold text-warning">
+            <i class="fas fa-heart me-2"></i><span id="support_title"></span>
+          </h1>
+          <p id="support_message" class="mb-4"></p>
+          <a href="https://ko-fi.com/tuusuario" target="_blank" class="btn btn-lg shadow"
+             style="background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold; padding: 0.75rem 2rem;"
+             id="support_button"></a>
+        </section>
       </div>
+
+    </div>
   </div>
 
   <button id="langToggle" class="btn btn-sm" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: var(--accent-orange); color: var(--bg-dark); font-weight: bold;">
@@ -201,7 +197,7 @@
       elements.forEach(el => {
         const key = el.id;
         if (translations[lang][key]) {
-          if (key === 'invite_button') {
+          if (key === 'invite_button' || key === 'support_button') {
             el.innerHTML = translations[lang][key];
           } else {
             el.innerText = translations[lang][key];
