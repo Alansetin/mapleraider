@@ -155,9 +155,38 @@
 
   <!-- Tabs Instrucciones -->
       <div class="tab-pane fade" id="instrucciones">
-        <h2><i class="fas fa-book"></i> ¿Cómo usar el bot?</h2>
-        <p>Usa el comando <code>/boss</code> para crear una nueva raid. Los usuarios pueden confirmar su asistencia con botones interactivos. El organizador recibe notificaciones y puede finalizar la raid o cancelarla fácilmente.</p>
-      </div>
+  <h2><i class="fas fa-book"></i> Guía de Uso</h2>
+  <p class="mb-4">A continuación te mostramos cómo utilizar cada comando del bot con explicaciones claras y ejemplos.</p>
+
+  <div class="mb-5">
+    <h4 class="text-warning"><i class="fas fa-bullhorn me-2"></i>/boss</h4>
+    <p><strong>Crea una nueva raid.</strong> Define el jefe, la dificultad, la fecha y la hora. El bot generará un mensaje interactivo con botones para confirmar asistencia.</p>
+    <pre class="bg-dark p-3 rounded"><code>/boss boss:Lotus difficulty:Hard date:05-30 time:22:00 max_party:6 description:Party para Lotus Hard</code></pre>
+    <p>🎯 <em>Recomendado para líderes de party que quieran coordinar rápido y sin confusión.</em></p>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-warning"><i class="fas fa-list-ul me-2"></i>/bosslist</h4>
+    <p><strong>Muestra la lista de confirmados</strong> para la raid actual, incluyendo menciones y contador de integrantes.</p>
+    <pre class="bg-dark p-3 rounded"><code>/bosslist</code></pre>
+    <p>👥 <em>Útil para verificar quién ya se unió antes de iniciar la batalla.</em></p>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-warning"><i class="fas fa-gear me-2"></i>/bosscfg</h4>
+    <p><strong>Configura el idioma, categoría y permisos.</strong> Permite decidir quién puede usar los comandos del bot y en qué canal se crean las raids.</p>
+    <pre class="bg-dark p-3 rounded"><code>/bosscfg</code></pre>
+    <p>⚙️ <em>Ideal para administradores y moderadores del servidor.</em></p>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="text-warning"><i class="fas fa-circle-question me-2"></i>/bosshelp</h4>
+    <p><strong>Muestra esta guía directamente dentro de Discord</strong> como un embed bonito, útil para nuevos usuarios.</p>
+    <pre class="bg-dark p-3 rounded"><code>/bosshelp</code></pre>
+    <p>📚 <em>Todos los comandos en un solo lugar, sin salir del servidor.</em></p>
+  </div>
+</div>
+
 
         <!-- Tabs Comandos -->
       <div class="tab-pane fade" id="comandos">
